@@ -1,9 +1,7 @@
 FROM       michaelsauter/alpine:3.3
 MAINTAINER Michael Sauter <mail@michaelsauter.net>
 
-ARG redis_version=3.0.5-r1
-
-RUN sudo apk-install redis=$redis_version
+RUN sudo apk-install redis=3.0.5-r1
 
 ADD redis /redis
 RUN sudo chown -R default: /redis/data
